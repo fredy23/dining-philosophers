@@ -23,7 +23,7 @@ private:
     std::string m_name;
     Fork& m_leftFork;
     Fork& m_rightFork;
-    mutable int m_totalEaten {0};
+    mutable int m_totalMeals {0};
 
     std::thread m_thread;
 };

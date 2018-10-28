@@ -40,9 +40,9 @@ void Philosopher::live() const
 
 void Philosopher::eat() const
 {
-    ++m_totalEaten;
+    ++m_totalMeals;
 
-    PhilosophersUtilities::printMessage(m_name + "is eating (" + std::to_string(m_totalEaten) + ")");
+    PhilosophersUtilities::printMessage(m_name + "is eating (" + std::to_string(m_totalMeals) + ")");
     PhilosophersUtilities::randomPause();
 }
 

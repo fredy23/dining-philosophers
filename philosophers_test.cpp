@@ -8,12 +8,6 @@
 
 int main()
 {
-    std::signal(SIGINT, [](int p_sigNum)
-    {
-        std::cout << "\nDinner is over!\n";
-        std::exit(p_sigNum);
-    });
-
     constexpr std::size_t PHILOSOPHERS_NUM = 5;
     
     Fork l_forks[PHILOSOPHERS_NUM];
@@ -26,6 +20,12 @@ int main()
         {"Pythagoras", l_forks[3], l_forks[4]},
         {"Democritus", l_forks[4], l_forks[0]},
     }};
+
+    std::signal(SIGINT, [](int p_sigNum)
+    {
+        std::cout << "\nDinner is over!\n";
+        std::exit(p_sigNum);
+    });
 
     std::getchar();
 }
