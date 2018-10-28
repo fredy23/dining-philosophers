@@ -19,9 +19,6 @@ private:
     void live() const;
     void eat() const;
     void think() const;
-    void randomPause() const;
-
-    static std::mutex m_streamMutex;
 
     std::string m_name;
     Fork& m_leftFork;
